@@ -12,14 +12,22 @@ on:
 jobs:
   deploy-docs:
     runs-on: ubuntu-latest
+    
+    # Concede permissões de escrita para o job
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        # CORREÇÃO: Atualizado para a versão v4 da action
+        uses: actions/checkout@v4
+        with:
+          fetch_depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # Também atualizado para a versão mais recente
         with:
-          python-version: 3.11 # Use a mesma versão que você usa para desenvolver
+          python-version: 3.11
 
       - name: Install documentation dependencies
         run: |
@@ -27,3 +35,4 @@ jobs:
 
       - name: Deploy documentation to GitHub Pages
         run: mkdocs gh-deploy --force
+
