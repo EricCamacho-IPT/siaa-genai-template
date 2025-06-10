@@ -2,13 +2,12 @@
 # Um Makefile automatiza tarefas comuns de desenvolvimento. Em vez de lembrar e digitar
 # comandos longos, você pode simplesmente rodar `make <target>`. Este Makefile
 # oferece targets para instalação, lint, testes, execução do servidor e operações com Docker.
-# Adicionamos targets para instalar pacotes "extras" sob demanda.
 
 # Como modificar conforme seu projeto:
 # - Adicione novos targets para tarefas repetitivas do seu projeto (ex: `make data-download`).
 # - Modifique os targets existentes se precisar de flags ou comportamentos diferentes.
 
-.PHONY: help setup install lint test run clean docker-build docker-push install-extras
+.PHONY: help setup install lint test run clean docker-build docker-push
 
 # Definição de variáveis
 PYTHON = python
@@ -32,10 +31,6 @@ help:
 	@echo "  clean          Remove arquivos de cache e build."
 	@echo "  docker-build   Constrói a imagem Docker para o projeto."
 	@echo "  docker-push    Envia a imagem Docker para um registro (configure o nome da imagem)."
-	@echo "\nOpções de Instalação de Extras:"
-	@echo "  install-rag          Instala dependências para RAG (faiss, beautifulsoup4)."
-	@echo "  install-langchain    Instala o LangChain."
-	@echo "  install-transformers Instala o Transformers e PyTorch."
 
 setup:
 	@echo ">>> Configurando ambiente virtual em $(VENV_DIR)..."
@@ -74,16 +69,3 @@ docker-push:
 	@echo ">>> Enviando imagem Docker para o registro..."
 	# Certifique-se de estar logado no seu registro Docker (ex: docker login)
 	docker push $(DOCKER_IMAGE_NAME):$(DOCKER_TAG)
-
-# --- Targets para Instalação de Extras ---
-install-rag:
-	@echo ">>> Instalando dependências para RAG..."
-	$(UV) pip install faiss-cpu beautifulsoup4
-
-install-langchain:
-	@echo ">>> Instalando LangChain..."
-	$(UV) pip install langchain langchain-community
-
-install-transformers:
-	@echo ">>> Instalando Transformers e PyTorch..."
-	$(UV) pip install transformers torch

@@ -22,7 +22,7 @@ Este template gera um esqueleto de projeto completo com `FastAPI`, `uv` (gerenci
 -   **Gerenciamento de Dependências com uv**: Utiliza `uv` para uma instalação e gerenciamento de pacotes.
 -   **Setup Automatizado**: Um hook pós-geração pergunta ao usuário se deseja criar o ambiente virtual e instalar todas as dependências automaticamente.
 -   **Containerização com Docker**: `Dockerfile` otimizado e multi-estágio para criar imagens leves e seguras para produção.
--   **Automação com `Makefile`**: Comandos prontos para instalar, testar, rodar a aplicação e gerenciar a imagem Docker.
+-   **Automação com Makefile**: Comandos prontos para instalar, testar, rodar a aplicação e gerenciar a imagem Docker.
 -   **Qualidade de Código**: Configurado com `ruff` para linting e formatação, garantindo um código limpo e consistente.
 -   **Integração Contínua**: Workflow de GitHub Actions que roda testes e lint a cada push ou pull request.
 
