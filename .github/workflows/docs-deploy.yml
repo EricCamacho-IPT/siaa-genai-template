@@ -22,7 +22,7 @@ jobs:
         # CORREÇÃO: Atualizado para a versão v4 da action
         uses: actions/checkout@v4
         with:
-          fetch_depth: 0
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5 # Também atualizado para a versão mais recente

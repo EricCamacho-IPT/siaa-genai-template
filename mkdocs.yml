@@ -80,9 +80,9 @@ nav:
     - 'Estrutura Principal': features/core-structure.md
     - 'Geração Condicional': features/conditional-generation.md
     - 'RAG (Retrieval-Augmented Generation)': features/rag.md
-    - 'Agentes (CrewAI & LangGraph)': features/agents.md
+    - 'Agentes': features/agents.md
     - 'Configuração com Hydra': features/hydra.md
-  - 'Como Fazer (How-To)':
+  - 'Como Fazer':
     - 'Como Customizar o Template': how-to/customizing.md
     - 'Como Publicar a Documentação': how-to/publishing-docs.md
   - 'Explicação': explanation.md
