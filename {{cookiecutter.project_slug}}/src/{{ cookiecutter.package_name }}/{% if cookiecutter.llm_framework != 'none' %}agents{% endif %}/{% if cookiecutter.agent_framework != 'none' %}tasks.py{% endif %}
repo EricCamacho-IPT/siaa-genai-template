@@ -1,4 +1,4 @@
-# Arquivo: {% if cookiecutter.agent_framework in ['crewai', 'langgraph'] %}src/{{cookiecutter.package_name}}/agents/tasks.py{% endif %}
+# Arquivo: {% if cookiecutter.llm_framework in ['crewai', 'langgraph'] %}src/{{cookiecutter.package_name}}/agents/tasks.py{% endif %}
 # Para que serve: Definir as tarefas que os agentes irão executar.
 
 def create_research_task(agent):

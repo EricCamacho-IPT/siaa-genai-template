@@ -51,8 +51,7 @@ O Cookiecutter irá solicitar que você preencha os seguintes valores:
 | `author_email`      | Seu e-mail                                                                              | `[seu_email@exemplo.com](mailto:your.email@example.com)`|
 | `description`       | Uma breve descrição do projeto                                                          | `Uma breve descrição do projeto`                        |
 | `license`           | A licença do software para o projeto gerado                                             | `MIT`                                                   |
-| `llm_framework`     | Framework principal para LLM (langchain, transformers, etc.)                            | `langchain`                                             |
-| `agent_framework`   | Framework de agentes a ser utilizado (langgraph, crewai, pydanticai)                    | `none`                                                  |
+| `llm_framework`     | Framework para LLM e agentes a ser utilizado (langchain, langgraph, crewai, pydanticai) | `none`                                                  |
 | `use_rag`           | (y/n) Gerar estrutura de pastas e arquivos para RAG?                                    | `n`                                                     |
 | `use_mkdocs`        | (y/n) Gerar estrutura de documentação com MkDocs?                                       | `y`                                                     |
 | `use_hydra`         | (y/n) Gerar estrutura de configuração com Hydra?                                        | `y`                                                     |
@@ -63,7 +62,7 @@ O Cookiecutter irá solicitar que você preencha os seguintes valores:
 A estrutura final do seu projeto dependerá das suas respostas.
 
 - Se `use_rag == 'y'`, uma pasta `src/{{cookiecutter.package_name}}/rag/` será criada com scripts para embeddings, vector store e retrievers.
-- Se `agent_framework` for `crewai`, `langgraph` ou `pydanticai`, uma pasta `src/{{cookiecutter.package_name}}/agents/` será criada com uma estrutura modular para agentes e tarefas.
+- Se `llm_framework` for `crewai`, `langgraph` ou `pydanticai`, uma pasta `src/{{cookiecutter.package_name}}/agents/` será criada com uma estrutura modular para agentes e tarefas.
 - Se `use_mkdocs == 'y'`, uma pasta `docs/` e um arquivo `mkdocs.yml` serão adicionados ao seu projeto.
 - Se `use_hydra == 'y'`, uma pasta `config/` será criada
 

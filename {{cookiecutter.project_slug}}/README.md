@@ -158,7 +158,7 @@ make test
 ├── notebooks/              # Jupyter Notebooks para exploração e experimentação
 ├── src/
 │   └── {{ cookiecutter.package_name }}/  # Código-fonte principal do projeto
-│       {%- if cookiecutter.agent_framework != 'none' %}
+│       {%- if cookiecutter.llm_framework != 'none' %}
 │       ├── agents/         # Lógica para Agentes (tasks, crew, etc.)
 │       {%- endif %}
 │       {%- if cookiecutter.use_rag == 'y' %}

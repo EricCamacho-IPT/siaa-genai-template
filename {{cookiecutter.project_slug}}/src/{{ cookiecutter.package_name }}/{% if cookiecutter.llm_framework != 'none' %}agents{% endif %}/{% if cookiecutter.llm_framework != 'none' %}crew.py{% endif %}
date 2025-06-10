@@ -1,4 +1,4 @@
-# Arquivo: {% if cookiecutter.agent_framework in ['crewai', 'langgraph'] %}src/{{cookiecutter.package_name}}/agents/crew.py{% endif %}
+# Arquivo: {% if cookiecutter.llm_framework in ['crewai', 'langgraph'] %}src/{{cookiecutter.package_name}}/agents/crew.py{% endif %}
 # Para que serve: Definir e montar os agentes e a equipe (crew).
 
 def create_crew():
