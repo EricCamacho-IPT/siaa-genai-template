@@ -1,8 +1,8 @@
 # Informações do Template
 site_name: SIAA GenAI Template
-site_url: "https://ipt.github.io/siaa-genai-template/"
-repo_url: "https://github.com/ipt/siaa-genai-template"
-repo_name: "ipt/siaa-genai-template"
+site_url: "https://ericcamacho-ipt.github.io/siaa-genai-template"
+repo_url: "https://github.com/EricCamacho-IPT/siaa-genai-template"
+repo_name: "EricCamacho-IPT/siaa-genai-template"
 edit_uri: "edit/main/docs/"
 
 # Tema e Aparência
@@ -34,7 +34,7 @@ theme:
 extra:
   social:
     - icon: "fontawesome/brands/github"
-      link: "https://github.com/ipt"
+      link: "https://github.com/EricCamacho-IPT"
 
 # Extensões do Markdown para funcionalidades avançadas
 markdown_extensions:

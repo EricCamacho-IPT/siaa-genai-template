@@ -9,7 +9,7 @@ Este template gera um esqueleto de projeto completo com `FastAPI`, `uv` (gerenci
 
 ## ✨ Documentação do Template
 
-[SIAA GenAI](https://ipt.github.io/siaa-genai-template/)
+[SIAA GenAI](https://https://ericcamacho-ipt.github.io/siaa-genai-template/)
 
 ## ✨ Funcionalidades Principais
 
@@ -35,7 +35,7 @@ pip install cookiecutter
 ```
 Em seguida, rode o seguinte comando e responda às perguntas:
 ```bash
-cookiecutter gh:ipt/siaa-genai-template
+cookiecutter gh:EricCamacho-IPT/siaa-genai-template
 ```
 
 ### ⚙️ Opções do Template

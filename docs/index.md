@@ -1,6 +1,6 @@
 # Bem-vindo ao SIAA GenAI Template
 
-![Logo do Projeto](assets/logo.png)
+<img src="assets/logo.png" width="300">
 
 Este é um template **Cookiecutter** projetado para acelerar a criação de projetos robustos e prontos para produção de APIs baseadas em Modelos de Linguagem (LLMs).
 
