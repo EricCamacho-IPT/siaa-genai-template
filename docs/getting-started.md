@@ -12,7 +12,7 @@ pip install cookiecutter
 
 ### 2. Gerando o Projeto
 
-Execute o seguinte comando no seu terminal. Ele irá clonar o template e iniciar o processo de configuração interativo.
+Execute o seguinte comando no seu terminal. Ele clonará o template e iniciará o processo de configuração interativo.
 
 ```bash
 cookiecutter gh:EricCamacho-IPT/siaa-genai-template
@@ -38,12 +38,14 @@ Entre na pasta do seu novo projeto e ative o ambiente virtual recém-criado:
 
 `cd <nome_do_seu_projeto>`
 
+No Linux/macOS
+
 ```bash
-# No Linux/macOS
 source .venv/bin/activate`
 ```
 
+No Windows
+
 ```bash
-# No Windows
 .venv\Scripts\activate
 ```

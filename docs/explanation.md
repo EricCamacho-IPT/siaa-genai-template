@@ -2,9 +2,9 @@
 
 Nesta seção, explicamos o "porquê" por trás de algumas das escolhas tecnológicas e de design deste template.
 
-### Por que `uv` em vez de `Poetry` ou `pip`?
+### Por que `uv` em vez de `poetry` ou `pip`?
 
--   **Velocidade:** `uv` é uma ferramenta de nova geração escrita em Rust, sendo ordens de magnitude mais rápida que `pip` e `poetry` para resolver e instalar dependências. Em projetos de IA com muitas bibliotecas pesadas, isso faz uma grande diferença.
+-   **Velocidade:** `uv` é uma ferramenta da nova geração, escrita em Rust, com velocidades maiores que usando `pip` ou `poetry` para resolver e instalar dependências. Em projetos de IA com muitas bibliotecas pesadas, isso faz uma grande diferença.
 -   **Simplicidade:** Ele adota o formato padrão `requirements.txt`, que é universalmente entendido, ao mesmo tempo que oferece um resolvedor de dependências moderno e cache global.
 
 ### Por que FastAPI?
@@ -16,5 +16,6 @@ Nesta seção, explicamos o "porquê" por trás de algumas das escolhas tecnoló
 ### Por que uma Estrutura de Pastas Detalhada?
 
 A estrutura com `data/`, `src/`, `notebooks/`, etc., é baseada em padrões bem estabelecidos na comunidade de Ciência de Dados (como o [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)). Ela promove:
+
 -   **Reprodutibilidade:** Separar dados, código e notebooks torna mais fácil para outros (e para você no futuro) entenderem e reproduzirem seu trabalho.
 -   **Manutenibilidade:** Código modular em `src/` é mais fácil de testar e manter do que scripts soltos.

@@ -1,6 +1,11 @@
-# Informações do Template
+# Para que serve este arquivo:
+# Este é o arquivo de configuração para o MkDocs, a ferramenta que gera
+# a documentação do seu TEMPLATE. É aqui que você define o nome do site,
+# o tema, as extensões de markdown e a navegação da sua documentação.
+
+# Informações do seu Template
 site_name: SIAA GenAI Template
-site_url: "https://ericcamacho-ipt.github.io/siaa-genai-template"
+site_url: "https://ericcamacho-ipt.github.io/siaa-genai-template/"
 repo_url: "https://github.com/EricCamacho-IPT/siaa-genai-template"
 repo_name: "EricCamacho-IPT/siaa-genai-template"
 edit_uri: "edit/main/docs/"
@@ -16,25 +21,31 @@ theme:
     # Modo Claro
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: 'indigo'
+      accent: 'indigo'
       toggle:
         icon: material/brightness-7
         name: Mudar para modo escuro
     # Modo Escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: 'black'
+      accent: 'indigo'
       toggle:
         icon: material/brightness-4
         name: Mudar para modo claro
   features:
     - content.code.annotate
-    - navigation.tabs
-    - navigation.top
-    - search.suggest
+    - content.code.copy # Adiciona o botão de copiar nos blocos de código
+    - navigation.tabs # Ativa a navegação principal por abas
+    - navigation.top # Adiciona um botão de "voltar ao topo"
+    - search.suggest # Melhora a busca com sugestões
+    - toc.follow # Faz o sumário na lateral acompanhar a rolagem da página
 
 extra:
   social:
     - icon: "fontawesome/brands/github"
-      link: "https://github.com/EricCamacho-IPT"
+      link: "https://github.com/iptsp"
 
 # Extensões do Markdown para funcionalidades avançadas
 markdown_extensions:
@@ -48,8 +59,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
       title: Nesta página
