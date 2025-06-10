@@ -5,20 +5,19 @@
     // falsos positivos em arquivos que usam a sintaxe do Jinja2.
 
     "files.associations": {
-        // Associa o Dockerfile do template com o tipo 'jinja-dockerfile',
-        // o que permite o uso de variáveis Jinja sem erros de lint.
+        // Associa arquivos específicos com tipos de arquivo com suporte a Jinja,
+        // o que permite o uso de variáveis sem erros de lint.
         "{{cookiecutter.project_slug}}/Dockerfile": "jinja-dockerfile",
-
-        // Associa o pyproject.toml do template com o tipo 'jinja-toml',
-        // permitindo o uso de variáveis Jinja.
         "{{cookiecutter.project_slug}}/pyproject.toml": "jinja-toml",
-
-        // Você pode adicionar outras associações aqui se necessário.
-        // Por exemplo, para o Makefile:
-        "{{cookiecutter.project_slug}}/Makefile": "jinja-makefile"
+        "{{cookiecutter.project_slug}}/Makefile": "jinja-makefile",
+        "{{cookiecutter.project_slug}}/.github/workflows/ci.yml": "jinja-yaml"
     },
 
     // Desativa a validação para arquivos TOML para evitar conflitos
     // com a sintaxe Jinja. A validação ainda ocorrerá no projeto gerado.
-    "even-better-toml.validator.enabled": false
+    "even-better-toml.validator.enabled": false,
+
+    // Desativa a validação padrão da extensão 'YAML' (da Red Hat),
+    // que causa os falsos positivos no seu arquivo de workflow do template.
+    "yaml.validate": false
 }

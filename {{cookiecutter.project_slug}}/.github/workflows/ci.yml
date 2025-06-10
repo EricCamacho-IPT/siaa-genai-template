@@ -7,7 +7,7 @@
 # Como modificar conforme seu projeto:
 # - Altere as versões do Python na matriz de testes se precisar suportar outras versões.
 # - Adicione novos 'steps' para tarefas como build e deploy para ambientes de staging/produção.
-# - Configure 'secrets' no GitHub para usar em deployments (ex: ${{ secrets.DOCKER_HUB_TOKEN }}).
+# - Configure 'secrets' no GitHub para usar em deployments (ex: {% raw %}${{ secrets.DOCKER_HUB_TOKEN }}{% endraw %}).
 
 name: CI Pipeline
 
@@ -28,10 +28,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Python {% raw %}${{ matrix.python-version }}{% endraw %}
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: {% raw %}${{ matrix.python-version }}{% endraw %}
+        python-version: '{% raw %}${{ matrix.python-version }}{% endraw %}'
 
     - name: Install uv
       run: |
