@@ -1,0 +1,13 @@
+# Arquivo: {% if cookiecutter.use_rag == 'y' %}src/{{cookiecutter.package_name}}/rag/embeddings.py{% endif %}
+# Para que serve: Lidar com a criação de embeddings a partir de texto.
+
+def get_embedding_model():
+    """
+    Carrega o modelo de embedding.
+    TODO: Carregue seu modelo (ex: da HuggingFace, OpenAI).
+    """
+    print("Carregando modelo de embedding...")
+    # Exemplo:
+    # from langchain_community.embeddings import HuggingFaceEmbeddings
+    # return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    return None

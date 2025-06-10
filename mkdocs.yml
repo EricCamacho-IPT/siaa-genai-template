@@ -1,0 +1,77 @@
+# Informações do Template
+site_name: SIAA GenAI Template
+site_url: "https://ipt.github.io/siaa-genai-template/"
+repo_url: "https://github.com/ipt/siaa-genai-template"
+repo_name: "ipt/siaa-genai-template"
+edit_uri: "edit/main/docs/"
+
+# Tema e Aparência
+theme:
+  name: "material"
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Modo Claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    # Modo Escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+
+extra:
+  social:
+    - icon: "fontawesome/brands/github"
+      link: "https://github.com/ipt"
+
+# Extensões do Markdown para funcionalidades avançadas
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+      title: Nesta página
+
+# Plugins para o MkDocs
+plugins:
+  - search
+  - mkdocstrings
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+
+# Estrutura de Navegação do Site
+nav:
+  - 'Início': index.md
+  - 'Guia de Início Rápido': getting-started.md
+  - 'Funcionalidades':
+    - 'Estrutura Principal': features/core-structure.md
+    - 'Geração Condicional': features/conditional-generation.md
+    - 'RAG (Retrieval-Augmented Generation)': features/rag.md
+    - 'Agentes (CrewAI & LangGraph)': features/agents.md
+    - 'Configuração com Hydra': features/hydra.md
+  - 'Como Fazer (How-To)':
+    - 'Como Customizar o Template': how-to/customizing.md
+    - 'Como Publicar a Documentação': how-to/publishing-docs.md
+  - 'Explicação': explanation.md

@@ -1,0 +1,28 @@
+# Para que serve este arquivo:
+# Este arquivo lista as dependências de produção do projeto.
+# Use `uv pip install -r requirements.txt` para instalá-las.
+# Para adicionar uma nova dependência, simplesmente adicione uma nova linha: `nome-da-lib>=versao`.
+
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0.post1
+pydantic>=2.4.2
+python-dotenv>=1.0.0
+
+{% if cookiecutter.llm_framework == "langchain" -%}
+langchain>=0.0.339
+langchain-community>=0.0.4
+{%- elif cookiecutter.llm_framework == "transformers" -%}
+transformers>=4.35.2
+torch>=2.1.0
+{%- elif cookiecutter.llm_framework == "crewai" -%}
+crewai[tools]>=0.1.22
+{%- elif cookiecutter.llm_framework == "langgraph" -%}
+langgraph>=0.0.19
+{%- elif cookiecutter.llm_framework == "pydantic-ai" -%}
+pydantic-ai>=0.1.2
+{%- endif %}
+
+{% if cookiecutter.use_rag == "y" -%}
+faiss-cpu>=1.7.4 # ou faiss-gpu para ambientes com GPU
+beautifulsoup4>=4.12.2
+{%- endif %}

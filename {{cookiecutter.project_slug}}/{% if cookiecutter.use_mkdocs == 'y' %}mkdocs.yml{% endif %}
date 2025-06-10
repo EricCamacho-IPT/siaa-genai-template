@@ -1,0 +1,6 @@
+# Arquivo: {% if cookiecutter.use_mkdocs == 'y' %}mkdocs.yml{% endif %}
+# Para que serve: Arquivo de configuração para o MkDocs, o gerador de documentação.
+
+site_name: {{ cookiecutter.project_name }}
+theme:
+  name: material

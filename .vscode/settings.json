@@ -1,0 +1,24 @@
+{
+    // Para que serve este arquivo:
+    // Este arquivo de configuração do VS Code ajuda a melhorar a experiência
+    // de desenvolvimento do SEU TEMPLATE. Ele "ensina" o editor a não marcar
+    // falsos positivos em arquivos que usam a sintaxe do Jinja2.
+
+    "files.associations": {
+        // Associa o Dockerfile do template com o tipo 'jinja-dockerfile',
+        // o que permite o uso de variáveis Jinja sem erros de lint.
+        "{{cookiecutter.project_slug}}/Dockerfile": "jinja-dockerfile",
+
+        // Associa o pyproject.toml do template com o tipo 'jinja-toml',
+        // permitindo o uso de variáveis Jinja.
+        "{{cookiecutter.project_slug}}/pyproject.toml": "jinja-toml",
+
+        // Você pode adicionar outras associações aqui se necessário.
+        // Por exemplo, para o Makefile:
+        "{{cookiecutter.project_slug}}/Makefile": "jinja-makefile"
+    },
+
+    // Desativa a validação para arquivos TOML para evitar conflitos
+    // com a sintaxe Jinja. A validação ainda ocorrerá no projeto gerado.
+    "even-better-toml.validator.enabled": false
+}

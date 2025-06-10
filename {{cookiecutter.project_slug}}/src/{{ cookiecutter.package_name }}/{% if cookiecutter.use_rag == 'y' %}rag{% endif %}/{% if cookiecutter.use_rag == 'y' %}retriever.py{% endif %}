@@ -1,0 +1,13 @@
+# Arquivo: {% if cookiecutter.use_rag == 'y' %}src/{{cookiecutter.package_name}}/rag/retriever.py{% endif %}
+# Para que serve: Realizar a busca de similaridade no banco vetorial para encontrar os documentos mais relevantes para um prompt.
+
+def search_documents(query: str):
+    """
+    Busca documentos relevantes no vector store.
+    TODO: Implemente a lógica de busca.
+    """
+    print(f"Buscando documentos para: {query}")
+    # Exemplo:
+    # vector_store = get_vector_store()
+    # return vector_store.similarity_search(query)
+    return [{"page_content": "Conteúdo de documento relevante simulado."}]

@@ -1,0 +1,15 @@
+# Para que serve este arquivo:
+# Este arquivo lista as dependências de desenvolvimento (testes, lint, etc.).
+# O comando `-r requirements.txt` garante que todas as dependências de produção
+# também sejam instaladas no ambiente de desenvolvimento.
+
+-r requirements.txt
+
+# Ferramentas de Teste
+pytest>=7.4.3
+pytest-cov>=4.1.0
+httpx>=0.25.1
+
+# Ferramentas de Qualidade de Código
+ruff>=0.1.5
+pre-commit>=3.5.0

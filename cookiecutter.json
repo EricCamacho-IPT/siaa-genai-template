@@ -1,0 +1,17 @@
+{
+    "project_name": "LLM Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "author_name": "Seu Nome",
+    "author_email": "seu_email@exemplo.com",
+    "description": "Uma breve descrição sobre o projeto",
+    "version": "0.1.0",
+    "license": ["MIT", "Apache-2.0", "GPL-3.0", "Proprietary"],
+    "python_version": "3.11",
+    "agent_framework": ["none", "crewai", "langgraph", "pydanticai"],
+    "use_rag": ["y", "n"],
+    "use_mkdocs": ["y", "n"],
+    "use_hydra": ["y", "n"],
+    "docker_image_name": "{{ cookiecutter.project_slug }}",
+    "run_initial_setup": ["y", "n"]
+}

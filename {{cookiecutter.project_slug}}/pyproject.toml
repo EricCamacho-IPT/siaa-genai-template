@@ -1,0 +1,42 @@
+# Para que serve este arquivo:
+# O pyproject.toml é o arquivo de configuração padrão para projetos Python modernos.
+# Ele define metadados do projeto (nome, versão, autor) e configurações
+# de ferramentas de desenvolvimento como `ruff` (linter) e `pytest` (testes).
+# As dependências agora são gerenciadas nos arquivos `requirements.txt` e `requirements-dev.txt`.
+
+# Como modificar conforme seu projeto:
+# - Atualize os metadados na seção [project] conforme seu projeto evolui.
+# - Adicione novas dependências aos arquivos requirements.txt.
+# - Ajuste as configurações do `ruff` e `pytest` conforme as necessidades do seu time.
+
+[project]
+name = "{{ cookiecutter.package_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.description }}"
+authors = [
+    { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" },
+]
+license = { text = "{{ cookiecutter.license }}" }
+readme = "README.md"
+requires-python = ">={{ cookiecutter.python_version }}"
+dependencies = [
+    # As dependências de produção estão listadas em requirements.txt
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"] # Ignora linha muito longa, o black/formatação cuida disso
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov={{ cookiecutter.package_name }} --cov-report=term-missing"
+testpaths = [
+    "tests",
+]
+
+

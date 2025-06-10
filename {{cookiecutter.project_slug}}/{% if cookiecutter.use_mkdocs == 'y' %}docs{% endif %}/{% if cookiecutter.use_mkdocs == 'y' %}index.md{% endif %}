@@ -1,0 +1,6 @@
+# Arquivo: {% if cookiecutter.use_mkdocs == 'y' %}docs/index.md{% endif %}
+# Para que serve: Página inicial da sua documentação.
+
+# Welcome to MkDocs
+
+For full documentation visit [mkdocs.org](https://www.mkdocs.org).

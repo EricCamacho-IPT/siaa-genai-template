@@ -1,0 +1,13 @@
+# Arquivo: {% if cookiecutter.use_rag == 'y' %}src/{{cookiecutter.package_name}}/rag/vector_store.py{% endif %}
+# Para que serve: Gerenciar a criação, armazenamento e atualização do banco de dados vetorial (ex: FAISS, ChromaDB).
+
+def get_vector_store():
+    """
+    Carrega ou cria o banco de dados vetorial.
+    TODO: Implemente a lógica para seu Vector Store.
+    """
+    print("Inicializando o Vector Store...")
+    # Exemplo:
+    # from langchain.vectorstores import FAISS
+    # return FAISS.from_documents(documents, embeddings)
+    return None

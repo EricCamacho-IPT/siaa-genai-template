@@ -1,0 +1,16 @@
+# Arquivo: {% if cookiecutter.agent_framework in ['crewai', 'langgraph'] %}src/{{cookiecutter.package_name}}/agents/crew.py{% endif %}
+# Para que serve: Definir e montar os agentes e a equipe (crew).
+
+def create_crew():
+    """
+    Define os agentes e monta a equipe.
+    TODO: Implemente a definição dos seus agentes e da equipe.
+    """
+    print("Montando a equipe de agentes...")
+    # Exemplo com CrewAI:
+    # from crewai import Agent, Crew
+    # researcher = Agent(role='Pesquisador', ...)
+    # writer = Agent(role='Escritor', ...)
+    # task1 = create_research_task(researcher)
+    # return Crew(agents=[researcher, writer], tasks=[task1])
+    return "Equipe de agentes simulada"

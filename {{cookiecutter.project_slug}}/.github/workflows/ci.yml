@@ -1,0 +1,50 @@
+# Para que serve este arquivo:
+# Este é um workflow do GitHub Actions para Integração Contínua (CI).
+# Ele é acionado a cada push ou pull request para as branches `main` e `develop`.
+# O workflow instala as dependências com `uv`, roda o linter e os testes para garantir
+# que o novo código não quebre a aplicação e siga os padrões de estilo.
+
+# Como modificar conforme seu projeto:
+# - Altere as versões do Python na matriz de testes se precisar suportar outras versões.
+# - Adicione novos 'steps' para tarefas como build e deploy para ambientes de staging/produção.
+# - Configure 'secrets' no GitHub para usar em deployments (ex: ${{ secrets.DOCKER_HUB_TOKEN }}).
+
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["{{ cookiecutter.python_version }}"]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install uv
+      run: |
+        pip install uv
+
+    - name: Install dependencies
+      run: |
+        uv pip install -r requirements-dev.txt
+
+    - name: Lint with ruff
+      run: |
+        uv run ruff check .
+
+    - name: Test with pytest
+      run: |
+        uv run pytest
