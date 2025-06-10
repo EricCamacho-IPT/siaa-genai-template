@@ -1,0 +1,29 @@
+# Para que serve este arquivo:
+# Este workflow automatiza a publicação da documentação do seu TEMPLATE.
+# Ele é acionado sempre que há um push para a branch `main`.
+
+name: Deploy Docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Ou a branch principal do seu template
+
+jobs:
+  deploy-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11 # Use a mesma versão que você usa para desenvolver
+
+      - name: Install documentation dependencies
+        run: |
+          pip install -r requirements-docs.txt
+
+      - name: Deploy documentation to GitHub Pages
+        run: mkdocs gh-deploy --force

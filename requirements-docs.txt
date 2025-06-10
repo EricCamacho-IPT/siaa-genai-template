@@ -1,0 +1,7 @@
+# Dependências para construir a documentação com MkDocs
+
+mkdocs>=1.5.0
+mkdocs-material>=9.0.0
+mkdocstrings[python]>=0.23.0
+pymdown-extensions>=10.0
+mkdocs-git-revision-date-localized-plugin>=1.0
