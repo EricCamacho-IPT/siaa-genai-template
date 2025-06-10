@@ -26,7 +26,7 @@ Este template gera um esqueleto de projeto completo com `FastAPI`, `uv` (gerenci
 -   **Qualidade de Código**: Configurado com `ruff` para linting e formatação, garantindo um código limpo e consistente.
 -   **Integração Contínua**: Workflow de GitHub Actions que roda testes e lint a cada push ou pull request.
 
-## 🚀 Como Usar
+## 🚀 Como Usar!!
 
 Para gerar um novo projeto usando este template, certifique-se de que você tem o [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html) instalado:
 
