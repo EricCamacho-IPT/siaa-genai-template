@@ -9,7 +9,7 @@ Este template gera um esqueleto de projeto completo com `FastAPI`, `uv` (gerenci
 
 ## ✨ Documentação do Template
 
-[SIAA GenAI](https://https://ericcamacho-ipt.github.io/siaa-genai-template/)
+[SIAA GenAI](https://ericcamacho-ipt.github.io/siaa-genai-template/)
 
 ## ✨ Funcionalidades Principais
 
